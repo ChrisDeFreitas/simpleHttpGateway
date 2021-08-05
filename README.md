@@ -9,8 +9,10 @@ Will be adding features overtime.  But feel free to use as you see fit.
 - quickly define Express Middleware Endpoints
 - simple to add functionality using Express API
 - defaults to port 3000, change in [server.js](server.js)
+- log to stdout via console.log or format with: req.app.locals.log()
 - perfect for quick development projects
 - production should run behind a reverse proxy, firewall, or load balancer
+- suitable for running as Linux service via init script
 
 1. Install
 ```BASH
@@ -27,8 +29,8 @@ $ npm start
 3. Endpoint plugins
 - on startup ./endpoints/ is scanned for .js files exporting an "endpoints" array.
 - see [endpoints/test.js](endpoints/test.js) for a sample file
-- see [Express Middleware Function Definition](https://expressjs.com/en/4x/api.html#app.get.method)
 - see [Express API Reference](https://expressjs.com/en/4x/api.html) 
+- see [Express Middleware Function Definition](https://expressjs.com/en/4x/api.html#app.get.method)
 - minimum structure for endpoints in  array:
 ```javascript
 {
@@ -45,6 +47,7 @@ $ npm start
   // function called when endpoint requested
   // handle as any express request
   // arguments are the expressjs request and response objects
+  // see: https://expressjs.com/en/4x/api.html#app.get.method
 }
 ```
 
