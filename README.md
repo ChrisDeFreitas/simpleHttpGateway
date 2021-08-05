@@ -2,7 +2,7 @@
 
 I am warehousing a bare bones http server.  I use it whenever I need to build out custom server functionality.  I was using https://hapi.dev, but it was overkill for all the projects I worked on.  So I put this server together looking at the bare functionality needed to serve http requests, while allowing for extended functionality via expressjs (and its plugin ecosystem).
 
-All be adding features overtime.  But feel free to use as you see fit.
+Will be adding features overtime.  But feel free to use as you see fit.
 
 
 
@@ -26,7 +26,7 @@ $ npm install
 $ npm start
 ```
 
-3. endpoint plugins
+3. Endpoint plugins
 - on startup ./endpoints is scanned for Javascript files exporting an "endpoints" array.
 - see [endpoints/test.js](endpoints/test.js) for a sample file
 - minimum structure object in the array:
