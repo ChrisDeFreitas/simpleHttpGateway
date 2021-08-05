@@ -71,6 +71,11 @@ module.exports.endpoints = [
 ]
 ```
 
-4. configure
-- edit epress.js settings in server.js
-- inject a custom handler in the plugin pipeline
+4. Test
+- default endpoints:
+  http://127.0.0.1:3000/test1
+  http://127.0.0.1:3000/test2
+  http://127.0.0.1:3000/test3
+  http://127.0.0.1:3000/test4
+  http://127.0.0.1:3000/test4?scroll=true
+  http://127.0.0.1:3000/test4?scroll=true&height=123
