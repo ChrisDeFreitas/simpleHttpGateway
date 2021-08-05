@@ -7,9 +7,11 @@ Will be adding features overtime.  But feel free to use as you see fit.
 0. Overview
 - built with https://expressjs.com
 - quickly define Express Middleware Endpoints
-- simple to add functionality using Express API
+- automatic http arg cleaning, see [server.js/testArgs(args, clientargs, apiargs)](server.js)
 - defaults to port 3000, change in [server.js](server.js)
-- log to stdout via console.log or format with: req.app.locals.log()
+- simple to modify [Express API](https://expressjs.com/en/4x/api.html)
+- monitor endpoint handling via stdout
+- log to stdout via console.log or format with req.app.locals.log(...args)
 - perfect for quick development projects
 - production should run behind a reverse proxy, firewall, or load balancer
 - suitable for running as Linux service via init script
@@ -30,7 +32,6 @@ $ npm start
 - on startup ./endpoints/ is scanned for .js files exporting an "endpoints" array.
 - see [endpoints/test.js](endpoints/test.js) for a sample file
 - see [Express Middleware Function Definition](https://expressjs.com/en/4x/api.html#app.get.method)
-- see [Express API Reference](https://expressjs.com/en/4x/api.html) 
 - minimum structure for endpoints in  array:
 ```javascript
 {
@@ -46,9 +47,9 @@ $ npm start
 
   exec(req, res){},  //required
   // function called when endpoint requested
-  // handle as any express request
-  // arguments are the expressjs request and response objects
-  // see: https://expressjs.com/en/4x/api.html#app.get.method
+  // arguments are request and response objects
+  // handle as any express middleware request, see:
+  //   https://expressjs.com/en/4x/api.html#app.get.method
 }
 ```
 
@@ -74,6 +75,7 @@ module.exports.endpoints = [
 
 4. Test
 - default endpoints:  
+  http://127.0.0.1:3000  
   http://127.0.0.1:3000/test1  
   http://127.0.0.1:3000/test2  
   http://127.0.0.1:3000/test3  
