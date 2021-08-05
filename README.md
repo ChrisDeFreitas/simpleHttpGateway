@@ -36,6 +36,7 @@ $ npm start
 {
   path:'',      //required
   // defines endpoint address/URI, for example: 127.0.0.1/[path property value]
+  // see https://expressjs.com/en/4x/api.html#path-examples
   
   argmap:{}, //not required, see test.js/test4 for example usage
   ver:'',    //not required
@@ -79,4 +80,3 @@ module.exports.endpoints = [
   http://127.0.0.1:3000/test4  
   http://127.0.0.1:3000/test4?scroll=true  
   http://127.0.0.1:3000/test4?scroll=true&height=123  
-  
