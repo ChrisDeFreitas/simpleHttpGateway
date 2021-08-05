@@ -7,7 +7,7 @@ Will be adding features overtime.  But feel free to use as you see fit.
 0. Overview
 - built with https://expressjs.com
 - quickly define Express Middleware Endpoints
-- automatic http arg cleaning, see [server.js/testArgs(args, clientargs, apiargs)](server.js)
+- automatic http arg cleaning, see [server.js/verifyArgs()](server.js)
 - defaults to port 3000, change in [server.js](server.js)
 - simple to modify [Express API](https://expressjs.com/en/4x/api.html)
 - monitor endpoint handling via stdout
