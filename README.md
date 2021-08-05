@@ -10,7 +10,7 @@ Will be adding features overtime.  But feel free to use as you see fit.
 - built with https://expressjs.com
 - quickly define endpoints
 - simple to customize server functionality 
-- defautls to port 3000, change in [server.js](server.js)
+- defaults to port 3000, change in [server.js](server.js)
 - perfect for quick development projects
 - production should run behind a reverse proxy, firewall, or load balancer
 
@@ -27,8 +27,9 @@ $ npm start
 ```
 
 3. Endpoint plugins
-- on startup ./endpoints is scanned for Javascript files exporting an "endpoints" array.
+- on startup ./endpoints is scanned for .js files exporting an "endpoints" array.
 - see [endpoints/test.js](endpoints/test.js) for a sample file
+- see [Express API Referemce](https://expressjs.com/en/4x/api.html) 
 - minimum structure object in the array:
 ```javascript
 {
@@ -48,7 +49,7 @@ $ npm start
 }
 ```
 
-- sample plugin format from [endpoints/test.js](endpoints/test.js):
+- sample plugin from [endpoints/test.js](endpoints/test.js):
 ```javascript
 module.exports.endpoints = [
   { path:"/test3", 
