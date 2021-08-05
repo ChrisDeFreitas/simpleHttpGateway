@@ -30,11 +30,11 @@ $ npm start
 - on startup ./endpoints is scanned for .js files exporting an "endpoints" array.
 - see [endpoints/test.js](endpoints/test.js) for a sample file
 - see [Express API Referemce](https://expressjs.com/en/4x/api.html) 
-- minimum structure object in the array:
+- minimum structure for endpoints in  array:
 ```javascript
 {
   path:'',      //required
-  // defines endpoint addres, for example: 127.0.0.1/[path property value]
+  // defines endpoint addres/URI, for example: 127.0.0.1/[path property value]
   
   argmap:{}, //not required, see test.js/test4 for example usage
   ver:'',    //not required
