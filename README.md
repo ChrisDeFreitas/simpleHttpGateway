@@ -4,12 +4,10 @@ I am warehousing a bare bones http server.  I use it whenever I need to build ou
 
 Will be adding features overtime.  But feel free to use as you see fit.
 
-
-
 0. Overview
 - built with https://expressjs.com
-- quickly define endpoints
-- simple to customize server functionality 
+- quickly define Express Middleware Endpoints
+- simple to add functionality using Express
 - defaults to port 3000, change in [server.js](server.js)
 - perfect for quick development projects
 - production should run behind a reverse proxy, firewall, or load balancer
@@ -27,14 +25,15 @@ $ npm start
 ```
 
 3. Endpoint plugins
-- on startup ./endpoints is scanned for .js files exporting an "endpoints" array.
+- on startup ./endpoints/ is scanned for .js files exporting an "endpoints" array.
 - see [endpoints/test.js](endpoints/test.js) for a sample file
-- see [Express API Referemce](https://expressjs.com/en/4x/api.html) 
+- see [Express Middleware Function Definition](https://expressjs.com/en/4x/api.html#app.get.method)
+- see [Express API Reference](https://expressjs.com/en/4x/api.html) 
 - minimum structure for endpoints in  array:
 ```javascript
 {
   path:'',      //required
-  // defines endpoint addres/URI, for example: 127.0.0.1/[path property value]
+  // defines endpoint address/URI, for example: 127.0.0.1/[path property value]
   
   argmap:{}, //not required, see test.js/test4 for example usage
   ver:'',    //not required

@@ -42,7 +42,7 @@ app.set('case sensitive routing', options['query parser'].default)
 app.set('case sensitive routing', options['trust proxy'].default)
 
 app.use(function (req, res, next) {  // called before each request handled
-  if(!req || !res) return
+  if(!req || !res) return   //is it for us?
 
 	res.locals.timestamp = (new Date()).toJSON()
 	app.locals.rcnt++
