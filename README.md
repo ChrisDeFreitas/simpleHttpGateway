@@ -28,7 +28,17 @@ $ npm install
 $ npm start
 ```
 
-3. Endpoint plugins
+3. Test
+- default endpoints:  
+  http://127.0.0.1:3000  
+  http://127.0.0.1:3000/test1  
+  http://127.0.0.1:3000/test2  
+  http://127.0.0.1:3000/test3  
+  http://127.0.0.1:3000/test4  
+  http://127.0.0.1:3000/test4?scroll=true  
+  http://127.0.0.1:3000/test4?scroll=true&height=123  
+
+4. Endpoint plugins
 - on startup ./endpoints/ is scanned for .js files exporting an "endpoints" array.
 - see [endpoints/test.js](endpoints/test.js) for a sample file
 - minimum structure for endpoints in  array:
@@ -72,12 +82,3 @@ module.exports.endpoints = [
 ]
 ```
 
-4. Test
-- default endpoints:  
-  http://127.0.0.1:3000  
-  http://127.0.0.1:3000/test1  
-  http://127.0.0.1:3000/test2  
-  http://127.0.0.1:3000/test3  
-  http://127.0.0.1:3000/test4  
-  http://127.0.0.1:3000/test4?scroll=true  
-  http://127.0.0.1:3000/test4?scroll=true&height=123  
