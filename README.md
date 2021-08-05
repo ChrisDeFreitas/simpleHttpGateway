@@ -31,7 +31,6 @@ $ npm start
 3. Endpoint plugins
 - on startup ./endpoints/ is scanned for .js files exporting an "endpoints" array.
 - see [endpoints/test.js](endpoints/test.js) for a sample file
-- see [Express Middleware Definition](https://expressjs.com/en/4x/api.html#app.get.method)
 - minimum structure for endpoints in  array:
 ```javascript
 {
