@@ -7,7 +7,7 @@ Will be adding features overtime.  But feel free to use as you see fit.
 0. Overview
 - built with https://expressjs.com
 - quickly define Express Middleware Endpoints
-- simple to add functionality using Express
+- simple to add functionality using Express API
 - defaults to port 3000, change in [server.js](server.js)
 - perfect for quick development projects
 - production should run behind a reverse proxy, firewall, or load balancer
