@@ -1,20 +1,20 @@
-# simpleHttpGateway
+# Simple HTTP Gateway
 
 I am warehousing a bare bones http server.  I use it whenever I need to build out custom server functionality.  I was using https://hapi.dev, but it was overkill for all the projects I worked on.  So I put this server together looking at the bare functionality needed to serve http requests, while allowing for extended functionality via expressjs (and its plugin ecosystem).
 
 Will be adding features overtime.  But feel free to use as you see fit.
 
 0. Overview
-- built with https://expressjs.com
+- basic http routing functionality built around https://expressjs.com
 - quickly define Express Middleware Endpoints
 - automatic http arg cleaning, see [server.js/verifyArgs()](server.js)
-- defaults to port 3000, change in [server.js](server.js)
-- simple to modify [Express API](https://expressjs.com/en/4x/api.html)
+- defaults to port 3000, change in [server.js/options](server.js)
 - monitor endpoint handling via stdout
 - log to stdout via console.log or format with req.app.locals.log(...args)
 - perfect for quick development projects
 - production should run behind a reverse proxy, firewall, or load balancer
 - suitable for running as Linux service via init script
+- well documented [Express API](https://expressjs.com/en/4x/api.html)
 
 1. Install
 ```BASH
@@ -31,7 +31,7 @@ $ npm start
 3. Endpoint plugins
 - on startup ./endpoints/ is scanned for .js files exporting an "endpoints" array.
 - see [endpoints/test.js](endpoints/test.js) for a sample file
-- see [Express Middleware Function Definition](https://expressjs.com/en/4x/api.html#app.get.method)
+- see [Express Middleware Definition](https://expressjs.com/en/4x/api.html#app.get.method)
 - minimum structure for endpoints in  array:
 ```javascript
 {
