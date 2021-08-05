@@ -72,10 +72,11 @@ module.exports.endpoints = [
 ```
 
 4. Test
-- default endpoints:
-  http://127.0.0.1:3000/test1
-  http://127.0.0.1:3000/test2
-  http://127.0.0.1:3000/test3
-  http://127.0.0.1:3000/test4
-  http://127.0.0.1:3000/test4?scroll=true
-  http://127.0.0.1:3000/test4?scroll=true&height=123
+- default endpoints:  
+  http://127.0.0.1:3000/test1  
+  http://127.0.0.1:3000/test2  
+  http://127.0.0.1:3000/test3  
+  http://127.0.0.1:3000/test4  
+  http://127.0.0.1:3000/test4?scroll=true  
+  http://127.0.0.1:3000/test4?scroll=true&height=123  
+  
